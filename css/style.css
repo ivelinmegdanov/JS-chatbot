@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  background-color: #444654;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  padding: 20px;
+}
+
+.response {
+  width: 80%;
+  display: flex;
+  border: 1px solid gray;
+  padding: 20px;
+  flex-direction: column;
+  font-size: 20px;
+  color: #c8d5db;
+  align-items: flex-start;
+  margin-bottom: 95px;
+}
+
+.input {
+  font-size: 20px;
+  color: #fff;
+  background-color: #40414f;
+  box-shadow: 0 0 8px rgb(0 0 0 / 50%), 0 0 0 0.15vw transparent;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  transition: .4s;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 20px;
+  width: 80%;
+}
+.input:hover {
+  box-shadow: 0 0 0 2px #30313a;
+}
+.input:focus {
+  box-shadow: 0 0 0 2px skyblue;
+}
+
+.myMessage {
+  background-color: #343541;
+  width: 100%;
+}
+
+.fade {
+  z-index: -1;
+  position: fixed;
+  width: 100%;
+  height: 10%;
+  bottom: 0;
+  background-color: #30313a;
+  opacity: 0.5;
+}
