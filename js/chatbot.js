@@ -24,6 +24,10 @@ input.addEventListener("keyup", function(event) {
       } else {
         response.innerHTML += `<p>${getRandomResponse(greetingResponse)}</p>`;
       }
+    } else if (weatherInput.includes(userInput)) {
+      returnWeather();
+    } else if (timeInput.includes(userInput)) {
+      returnTime();
     } else if (userInput === "аз обичам") {
       response.innerHTML += `<p>${getRandomResponse(loveResponse)}</p>`;
     } else {
