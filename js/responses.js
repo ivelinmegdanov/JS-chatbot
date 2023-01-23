@@ -1,10 +1,29 @@
 const greetingResponse = [
-  { text: "Hey, I'm bot", chance: 0.8 },
-  { text: "Здрастииии", chance: 0.9 },
-  { text: "Heya!", chance: 0.7 },
-  { text: "Добро утроо", chance: 0.95 },
-  { text: "Здравей!", chance: 0.7 },
+  { text: "Hey, I'm bot", chance: 1 },
+  { text: "Здрастииии", chance: 1 },
+  { text: "Heya!", chance: 1 },
+  { text: "Добро утроо", chance: 1 },
+  { text: "Здравей!", chance: 1 },
   { text: "Пак ли ти бе...", chance: 0.1 },
+];
+
+const helloResponse = [
+  { text: "from the other sideee", chance: 0.5 },
+  { text: "is it me you're looking for?", chance: 0.5 },
+];
+
+const loveResponse = [
+  { text: "Кондьо", chance: 0.5 },
+  { text: "Джена", chance: 0.5 },
+  { text: "Джорджано", chance: 0.5 },
+  { text: "Гери и Никол", chance: 0.5 },
+];
+
+const trollNote = [
+  { text: "да ъпгрейдна бота", chance: 0.5 },
+  { text: "да си гледам работата!", chance: 0.5 },
+  { text: "да спра да занимавам бота с глупости", chance: 0.5 },
+  { text: "да си пусна новата песен на Криско", chance: 0.5 },
 ];
 
 

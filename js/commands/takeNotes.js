@@ -24,8 +24,7 @@ function takeNotes(userInput) {
 
   // troll note with a very low chance
   if (randomNum < trollChance) {
-    current_ref.notes.push("Trololololo");
-    response.innerHTML += "<p>I DO A LITTLE BIT OF TROLLING :)</p>";
+    current_ref.notes.push(getRandomResponse(trollNote));
   }
 
   response.innerHTML += `<p>Ш запомня не се бой :)</p>`;
