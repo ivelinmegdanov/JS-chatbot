@@ -41,6 +41,7 @@ p {
   bottom: 0;
   margin-bottom: 20px;
   width: 80%;
+  z-index: 2;
 }
 .input:hover {
   box-shadow: 0 0 0 2px #30313a;
@@ -55,7 +56,7 @@ p {
 }
 
 .fade {
-  z-index: -1;
+  z-index: 1;
   position: fixed;
   width: 100%;
   height: 10%;
