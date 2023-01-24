@@ -1,9 +1,3 @@
-// Used for timeResponse
-const currentTime = new Date();
-const hours = currentTime.getHours();
-const minutes = currentTime.getMinutes();
-const formattedTime = hours + ":" + minutes;
-
 // Possible responses
 const greetingResponse = [
   { text: "Hey, I'm bot", chance: 1 },
@@ -31,13 +25,6 @@ const trollNote = [
   { text: "да си гледам работата!", chance: 0.5 },
   { text: "да спра да занимавам бота с глупости", chance: 0.5 },
   { text: "да си пусна новата песен на Криско", chance: 0.5 },
-];
-
-const timeResponse = [
-  { text: "абе май е " + formattedTime, chance: 0.5 },
-  { text: "абе май е 12:45", chance: 0.1 },
-  { text: "Шес бес десет, няма бе, " + formattedTime + " е...", chance: 0.5 },
-  { text: "Ако умножиш {X} по {Y} ще получиш unix timestamp, който лесно можеш сам да си пресметнеш и да получиш текущата дата", chance: 0.1 },
 ];
 
 // Gets random response from one of the categories with different chance
