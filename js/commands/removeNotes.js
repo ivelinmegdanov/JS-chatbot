@@ -25,8 +25,11 @@ function removeNotes(userInput) {
   
   if (index !== -1) {
     current_ref.notes.splice(index, 1);
+    if(current_ref.notes.length === 0){
+      delete current_ref.notes;
+    }
     localStorage.setItem("Tasks", JSON.stringify(existing_notes));
-    response.innerHTML += `<p>Да шефе! Премахвам: ${note} от ${list}</p>`;
+    response.innerHTML += `<p>Да шефе! Премахвам: "${note}" от ${list}</p>`;
   } else {
     response.innerHTML += "<p>Ти мръдна ли? Няма такава бележка в тая категория..</p>";
   }

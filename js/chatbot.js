@@ -4,16 +4,20 @@ const response = document.getElementById("chatbot-response");
 input.addEventListener("keyup", function (event) {
   if (event.keyCode === 13) {
     event.preventDefault();
-    response.innerHTML += `<p class="myMessage">${input.value}</p>`;
-    let userInput = input.value.toLowerCase();
+
+    const userInputLower = input.value.toLowerCase();
+    const userInput = input.value;
     input.value = "";
-    if (userInput === "боте, кво запомни?") {
+
+    response.innerHTML += `<p class="myMessage">${userInput}</p>`;
+
+    if (userInputLower === "боте, кво запомни?") {
       returnNotes();
-    } else if (userInput.startsWith("боте, запомни в")) {
+    } else if (userInputLower.startsWith("боте, запомни в")) {
       takeNotes(userInput);
-    } else if (userInput.startsWith("боте, махни")) {
+    } else if (userInputLower.startsWith("боте, махни")) {
       removeNotes(userInput);
-    } else if (greetingInput.includes(userInput)) {
+    } else if (greetingInput.includes(userInputLower)) {
       if (userInput === "hello") {
         const randomNum = Math.random();
         if (randomNum > 0.5) {
@@ -24,11 +28,11 @@ input.addEventListener("keyup", function (event) {
       } else {
         response.innerHTML += `<p>${getRandomResponse(greetingResponse)}</p>`;
       }
-    } else if (weatherInput.includes(userInput)) {
+    } else if (weatherInput.includes(userInputLower)) {
       returnWeather();
-    } else if (timeInput.includes(userInput)) {
+    } else if (timeInput.includes(userInputLower)) {
       returnTime();
-    } else if (userInput === "аз обичам") {
+    } else if (userInputLower === "аз обичам") {
       response.innerHTML += `<p>${getRandomResponse(loveResponse)}</p>`;
     } else {
       const randomNum = Math.random();
