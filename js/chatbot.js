@@ -1,12 +1,12 @@
 const input = document.getElementById("user-input");
 const response = document.getElementById("chatbot-response");
 
-input.addEventListener("keyup", function(event) {
+input.addEventListener("keyup", function (event) {
   if (event.keyCode === 13) {
     event.preventDefault();
-    let userInput = input.value;
+    response.innerHTML += `<p class="myMessage">${input.value}</p>`;
+    let userInput = input.value.toLowerCase();
     input.value = "";
-    response.innerHTML += `<p class="myMessage">${userInput}</p>`
     if (userInput === "боте, кво запомни?") {
       returnNotes();
     } else if (userInput.startsWith("боте, запомни в")) {
@@ -14,7 +14,7 @@ input.addEventListener("keyup", function(event) {
     } else if (userInput.startsWith("боте, махни")) {
       removeNotes(userInput);
     } else if (greetingInput.includes(userInput)) {
-      if(userInput === "Hello"){
+      if (userInput === "hello") {
         const randomNum = Math.random();
         if (randomNum > 0.5) {
           response.innerHTML += `<p>${getRandomResponse(helloResponse)}</p>`;
@@ -31,7 +31,10 @@ input.addEventListener("keyup", function(event) {
     } else if (userInput === "аз обичам") {
       response.innerHTML += `<p>${getRandomResponse(loveResponse)}</p>`;
     } else {
-      response.innerHTML += "<p>Не намирам тая команда бе брат, дай по сериозно!</p>";
+      const randomNum = Math.random();
+      if (randomNum < 0.2) {
+        response.innerHTML += `<p>${getRandomResponse(randomBotResponse)}</p>`;
+      }
     }
     window.scrollTo(0, document.body.scrollHeight);
   }

@@ -27,6 +27,14 @@ const trollNote = [
   { text: "да си пусна новата песен на Криско", chance: 0.5 },
 ];
 
+const randomBotResponse = [
+  { text: "Oh my!", chance: 0.5 },
+  { text: "Мхм...", chance: 0.5 },
+  { text: "Yeah dude, I feel that..", chance: 0.5 },
+  { text: "...", chance: 0.5 },
+  { text: "Zzzzz", chance: 0.1 },
+]
+
 // Gets random response from one of the categories with different chance
 function getRandomResponse(responses) {
   let total = responses.reduce((acc, val) => acc + val.chance, 0);

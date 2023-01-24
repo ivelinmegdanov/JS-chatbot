@@ -1,6 +1,6 @@
 // Possible user inputs
-const greetingInput = ["Hello", "Хеллоу", "Hi", "драсте"];
+const greetingInput = ["hello", "хеллоу", "hi", "драсте"];
 
-const timeInput = ["Колко е часа?", "Час", "Време"];
+const timeInput = ["колко е часа?", "час", "време"];
 
-const weatherInput = ["Weather", "прогноза", "вали", "градус", "ракия", "сняг", "дъжд"];
+const weatherInput = ["weather", "прогноза", "вали", "градус", "ракия", "сняг", "дъжд"];
