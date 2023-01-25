@@ -7,7 +7,7 @@ function returnWeather() {
     .then((response) => response.json())
     .then((data) => {
       const windDirection = data.wind.deg;
-      const windSpeed = data.wind.speed;
+      const windSpeed = Math.round((data.wind.speed * 1.609344) * 1000);
       const weatherDescription = data.weather[0].description;
       const temp = Math.round(data.main.temp - 273.15);
 
@@ -17,7 +17,7 @@ function returnWeather() {
         {text: `Температурата е ${temp} градуса.`, chance: 1},
         {text: `В момента е ${weatherDescription}.`, chance: 1},
         {text: `За тези, които ги мързи да погледнат през прозореца - вън е ${weatherDescription}.`, chance: 0.2},
-        {text: `(Наплюнчва пръст и го показва през прозореца) Усещам вятър в посока ${windDirection}, около ${windSpeed} метра в секунда.`, chance: 1}
+        {text: `(Наплюнчва пръст и го показва през прозореца) Усещам вятър в посока ${windDirection}°, около ${windSpeed} метра в секунда.`, chance: 1}
       ];
 
       if (temp < 0) {
