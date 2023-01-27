@@ -1,6 +1,6 @@
 function takeNotes(userInput) {
   //troll
-  const trollChance = 0.05;
+  const trollChance = 0.2;
   let randomNum = Math.random();
 
   //input
@@ -20,13 +20,17 @@ function takeNotes(userInput) {
   }
 
   current_ref.notes = current_ref.notes ? current_ref.notes : [];
-  current_ref.notes.push(note);
+  if(current_ref.notes.indexOf(note) === -1) {
+    current_ref.notes.push(note);
 
-  // troll note with a very low chance
-  if (randomNum < trollChance) {
-    current_ref.notes.push(getRandomResponse(trollNote));
+    // troll note with a very low chance
+    if (randomNum < trollChance) {
+      current_ref.notes.push(getRandomResponse(trollNote));
+    }
+
+    response.innerHTML += `<p>Ш запомня не се бой :)</p>`;
+    localStorage.setItem("Tasks", JSON.stringify(existing_notes));
+  } else {
+    response.innerHTML += `<p>Вече имаш такава бележка в тази категория..</p>`;
   }
-
-  response.innerHTML += `<p>Ш запомня не се бой :)</p>`;
-  localStorage.setItem("Tasks", JSON.stringify(existing_notes));
 }
