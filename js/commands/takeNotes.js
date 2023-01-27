@@ -36,6 +36,6 @@ function takeNotes(userInput) {
     }
   }
   else {
-    response.innerHTML += `<p>То хубаво ама ама каква да е бележката..</p>`;
+    response.innerHTML += `<p>Не ти е правилен синтаксиса шефе! (боте, запомни в <категория> <категория> ... - <бележка>)</p>`;
   }
 }
