@@ -1,17 +1,16 @@
 const API_KEY = "1a260e62e35f609f529a1b306a7d3e0b";
 const city = "Varna";
-const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`;
+const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&lang=bg&units=metric`;
 
 function returnWeather() {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
       const windDirection = data.wind.deg;
-      const windSpeed = Math.round((data.wind.speed * 1.609344) * 1000);
+      const windSpeed = data.wind.speed;
       const weatherDescription = data.weather[0].description;
-      const temp = Math.round(data.main.temp - 273.15);
 
-      console.log(data);
+      const temp = Math.round(data.main.temp);
 
       weatherResponses = [
         {text: `Температурата е ${temp} градуса.`, chance: 1},
