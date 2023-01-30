@@ -22,7 +22,7 @@ function returnTime() {
     if(hours >= 18) {
         timeResponse.push({text: `Шес бес десет мина бе, ${formattedTime} е...`, chance: 0.5});
     } else {
-        timeResponse.push({text: `Шес бес десет е. Няма бе ${formattedTime} е...`, chance: 0.5});
+        timeResponse.push({text: `Шес бес десет, няма бе ${formattedTime} е...`, chance: 0.5});
     }
 
     if(hours === 17 && minutes === 50){

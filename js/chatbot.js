@@ -35,10 +35,7 @@ input.addEventListener("keyup", function (event) {
     } else if (userInputLower === "аз обичам") {
       response.innerHTML += `<p>${getRandomResponse(loveResponse)}</p>`;
     } else {
-      const randomNum = Math.random();
-      if (randomNum < 0.2) {
-        response.innerHTML += `<p>${getRandomResponse(randomBotResponse)}</p>`;
-      }
+      response.innerHTML += `<p>${getRandomResponse(randomBotResponse)}</p>`;
     }
     window.scrollTo(0, document.body.scrollHeight);
   }
